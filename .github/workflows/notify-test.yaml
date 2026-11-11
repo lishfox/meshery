@@ -1,0 +1,41 @@
+name: notify-test
+on:
+  push:
+    branches: ["test"]
+    paths: [".github/workflows/notify-test.yaml"]
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Simulate failure
+        run: exit 1
+
+  notify-via-email:
+    runs-on: ubuntu-24.04
+    needs:
+      - sync
+    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    steps:
+      - name: Print what the original email would contain
+        env:
+          SUBJECT: Go Mod Sync Failed - ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          BODY: |
+            Job Status: ${{ job.status }}
+            Repository: ${{ github.repository }}
+            Run ID: ${{ github.run_id }}
+            Workflow Name: ${{ github.workflow }}
+
+            Steps and their outcomes:
+            ${{ toJson(job.steps) }}
+        run: |
+          echo "===== ORIGINAL ====="
+          echo "SUBJECT: $SUBJECT"
+          echo "$BODY"
+
+      - name: Print what the fixed email would contain
+        env:
+          SUBJECT: Go Mod Sync Failed - sync job of ${{ github.repository }} is ${{ needs.sync.result }}
+        run: |
+          echo "===== FIXED ====="
+          echo "SUBJECT: $SUBJECT"
