@@ -139,11 +139,6 @@ Installation, troubleshooting and debugging of Meshery and its adapters
         <td></td>
         <td>Configures Meshery to use a Kubernetes cluster.</td>
       </tr>
-      <tr>
-        <td></td>
-        <td>--token</td>
-        <td>Path to token for authenticating to Meshery API.</td>
-      </tr>
       <tr><td><a href="/reference/mesheryctl/system/dashboard/">dashboard</a></td>
         <td></td>
         <td>Open Meshery UI in browser.</td>
@@ -157,6 +152,10 @@ Installation, troubleshooting and debugging of Meshery and its adapters
         <td></td>
         <td>--skip-browser</td>
         <td>(optional) skip opening of MesheryUI in browser.</td>
+      </tr>
+      <tr><td><a href="/reference/mesheryctl/system/delete/">delete</a></td>
+        <td></td>
+        <td>Delete Meshery containers created by docker-compose</td>
       </tr>
       <tr><td><a href="/reference/mesheryctl/system/login/">login</a></td>
         <td></td>
@@ -344,6 +343,10 @@ Installation, troubleshooting and debugging of Meshery and its adapters
         <td>--url</td>
         <td>(required/optional) URL of the endpoint send load to during testing.</td>
       </tr>
+      <tr><td><a href="/reference/mesheryctl/perf/delete/">delete</a></td>
+        <td></td>
+        <td>Delete a performance profile by its name</td>
+      </tr>
       <tr><td><a href="/reference/mesheryctl/perf/profile/">profile</a></td>
         <td></td>
         <td>List all the available performance profiles</td>
@@ -404,17 +407,12 @@ Installation, troubleshooting and debugging of Meshery and its adapters
       </tr>
       <tr>
         <td></td>
-        <td>--adapter, -a</td>
-        <td>(required) adapter to use for validation.</td>
-      </tr>
-      <tr>
-        <td></td>
         <td>--namespace, -n</td>
         <td>Kubernetes namespace to be used for deploying the validation tests and sample workload</td>
       </tr>
       <tr>
         <td></td>
-        <td>--tokenpath, -t</td>
+        <td>--token, -t</td>
         <td>(required) path to token for authenticating to Meshery API</td>
       </tr>
       <tr><td><a href="/reference/mesheryctl/adapter/remove/">remove</a></td>
@@ -437,17 +435,12 @@ Installation, troubleshooting and debugging of Meshery and its adapters
       </tr>
       <tr>
         <td></td>
-        <td>--namespace, -n</td>
-        <td>Kubernetes namespace to be used for deploying the validation tests and sample workload</td>
-      </tr>
-      <tr>
-        <td></td>
         <td>--spec, -s</td>
         <td>(required) specification to be used for conformance test. Defaults to &#34;smi&#34;</td>
       </tr>
       <tr>
         <td></td>
-        <td>--tokenpath, -t</td>
+        <td>--token, -t</td>
         <td>(required) path to token for authenticating to Meshery API</td>
       </tr>
 </tbody>
@@ -711,8 +704,8 @@ Installation, troubleshooting and debugging of Meshery and its adapters
       </tr>
       <tr>
         <td></td>
-        <td>--output-format, -o</td>
-        <td>(optional) format to display in [md | mdx | js]</td>
+        <td>--output, -o</td>
+        <td>(optional) location to output generated models (when unset, the repo-root models directory is auto-detected)</td>
       </tr>
       <tr>
         <td></td>
@@ -838,6 +831,41 @@ Installation, troubleshooting and debugging of Meshery and its adapters
       <tr><td><a href="/reference/mesheryctl/model/export/">export</a></td>
         <td></td>
         <td>Export a model by name to the given output type (default is oci).</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>--discard-components, -c</td>
+        <td>(optional) whether to discard components in the exported model definition (default false)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>--discard-relationships, -r</td>
+        <td>(optional) whether to discard relationships in the exported model definition (default false)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>--output-format, -t</td>
+        <td>(optional) format of the exported model definition [json|yaml] (default yaml)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>--output-location, -l</td>
+        <td>(optional) directory to save the exported model in (default current directory)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>--output-type, -o</td>
+        <td>(optional) package type of the exported model [oci|tar] (default oci)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>--page, -p</td>
+        <td>(optional) page number for paginated results (default 1)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>--version</td>
+        <td>(optional) model version to export, in vX.X.X format</td>
       </tr>
       <tr><td><a href="/reference/mesheryctl/model/generate/">generate</a></td>
         <td></td>
@@ -1031,7 +1059,7 @@ Installation, troubleshooting and debugging of Meshery and its adapters
       </tr>
       <tr>
         <td></td>
-        <td>-o, --orgId</td>
+        <td>--orgId</td>
         <td>organization id</td>
       </tr>
       <tr><td><a href="/reference/mesheryctl/environment/view/">view</a></td>
@@ -1227,7 +1255,7 @@ Installation, troubleshooting and debugging of Meshery and its adapters
       </tr>
       <tr>
         <td></td>
-        <td>-s, --sheetId</td>
+        <td>--spreadsheet-id</td>
         <td>google sheet id</td>
       </tr>
       <tr><td><a href="/reference/mesheryctl/relationship/list/">list</a></td>

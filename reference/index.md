@@ -12,6 +12,14 @@ References for using Meshery's various features and components.
 
 <div class="related-discussions">
   <h3>Recent Discussions with "meshery" Tag</h3><ul><li>
+          <a href="https://discuss.meshery.io/t/cannot-read-properties-of-undefined-reading-selectedenvs/8273" target="_blank" rel="noopener noreferrer">
+            Cannot read properties of undefined (reading &#39;selectedEnvs&#39;)
+          </a>
+        </li><li>
+          <a href="https://discuss.meshery.io/t/new-comer-here-and-looking-for-meshmates/8271" target="_blank" rel="noopener noreferrer">
+            New comer here and looking for Meshmates
+          </a>
+        </li><li>
           <a href="https://discuss.meshery.io/t/looking-for-a-meshmate-seeking-an-experienced-meshery-contributor-as-a-guide/8166" target="_blank" rel="noopener noreferrer">
             Looking for a MeshMate: Seeking an Experienced Meshery Contributor as a Guide
           </a>
@@ -34,14 +42,6 @@ References for using Meshery's various features and components.
         </li><li>
           <a href="https://discuss.meshery.io/t/request-for-a-meshmate-active-meshery-contributor/8158" target="_blank" rel="noopener noreferrer">
             Request for a MeshMate — Active Meshery Contributor
-          </a>
-        </li><li>
-          <a href="https://discuss.meshery.io/t/how-to-present-an-issue-pr-in-a-development-meeting-feedback-wanted/8107" target="_blank" rel="noopener noreferrer">
-            How to Present an Issue/PR in a Development Meeting: feedback wanted
-          </a>
-        </li><li>
-          <a href="https://discuss.meshery.io/t/newbie-here-excited-to-join/8052" target="_blank" rel="noopener noreferrer">
-            Newbie here -- Excited to join
           </a>
         </li></ul><p>
     <a href="https://discuss.meshery.io/tag/meshery" target="_blank" rel="noopener noreferrer">
@@ -68,6 +68,7 @@ Section pages:
 - [ErrAddonFromTemplateCode-1012](/reference/error-codes/adapter-meshery-istio/erraddonfromtemplatecode-1012/)
 - [ErrAddonSubscriptionCode-1188](/reference/error-codes/component-meshery-server/erraddonsubscriptioncode-1188/)
 - [ErrAmbiguousDependencyCode-1477](/reference/error-codes/component-meshery-server/errambiguousdependencycode-1477/)
+- [ErrAmbiguousIDCode-1256](/reference/error-codes/client-mesheryctl/errambiguousidcode-1256/)
 - [ErrAmbiguousSelectionCode-1253](/reference/error-codes/client-mesheryctl/errambiguousselectioncode-1253/)
 - [ErrAnnotatingNamespaceCode-1024](/reference/error-codes/adapter-meshery-linkerd/errannotatingnamespacecode-1024/)
 - [ErrAnonymousUserIDMissingCode-1467](/reference/error-codes/component-meshery-server/erranonymoususeridmissingcode-1467/)
@@ -709,6 +710,7 @@ Section pages:
 - [ErrMethodNotAllowedCode-1408](/reference/error-codes/component-meshery-server/errmethodnotallowedcode-1408/)
 - [ErrMigrateDatabaseTablesCode-1404](/reference/error-codes/component-meshery-server/errmigratedatabasetablescode-1404/)
 - [ErrMigrateEventCorrelationIndexCode-1487](/reference/error-codes/component-meshery-server/errmigrateeventcorrelationindexcode-1487/)
+- [ErrMigrateEventIndexesCode-1491](/reference/error-codes/component-meshery-server/errmigrateeventindexescode-1491/)
 - [ErrMintTraceContextCode-11340](/reference/error-codes/library-meshkit/errminttracecontextcode-11340/)
 - [ErrMissingCommandsCode-1137](/reference/error-codes/client-mesheryctl/errmissingcommandscode-1137/)
 - [ErrMissingFieldCode-11174](/reference/error-codes/library-meshkit/errmissingfieldcode-11174/)
